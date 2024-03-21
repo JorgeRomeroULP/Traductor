@@ -16,7 +16,7 @@ public class MainActivityViewModel extends AndroidViewModel {
     public void enviarPalabra(String palabra) {
 
         Intent intent = new Intent(getApplication(), MainActivity2.class);
-
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra("palabra", palabra);
 
         getApplication().startActivity(intent);
